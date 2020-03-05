@@ -9,7 +9,7 @@ namespace OOPaS2.Behaviors
     /// <summary>
     /// Интерфейс кряканья утки. Осуществляет "кря".
     /// </summary>
-    interface IQuacking
+    interface IQuackable
     {
         /// <summary>
         /// Крякнуть (сделать "кря").

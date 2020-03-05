@@ -44,9 +44,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Behaviors\IFlying.cs" />
-    <Compile Include="Behaviors\IQuacking.cs" />
+    <Compile Include="Behaviors\IQuackable.cs" />
     <Compile Include="Behaviors\ISwimming.cs" />
+    <Compile Include="Ducks\Decoy.cs" />
     <Compile Include="Ducks\Duck.cs" />
+    <Compile Include="Ducks\DuckTales.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

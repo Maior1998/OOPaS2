@@ -10,11 +10,19 @@ namespace OOPaS2.Ducks
     /// <summary>
     /// Представляет собой класс утки, содержащий поля и методы, которыми оперируют все утки.
     /// </summary>
-    public abstract class Duck
+    public abstract class Duck : DuckTales
     {
-        private IQuacking QuackBehavior;
-        private ISwimming SwimBehavior;
-        private IFlying FlyBehavior;
+        private protected IQuackable QuackBehavior;
+        private protected ISwimming SwimBehavior;
+        private protected IFlying FlyBehavior;
+
+        /// <summary>
+        /// Отображает текущую утку на экране.
+        /// </summary>
+        public void Display()
+        {
+
+        }
 
         /// <summary>
         /// Осуществляет кряканье текущей утки в соответствии с её поведением <see cref="QuackBehavior"/>.
