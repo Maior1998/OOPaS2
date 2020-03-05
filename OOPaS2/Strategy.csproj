@@ -43,12 +43,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Behaviors\IFlying.cs" />
-    <Compile Include="Behaviors\IQuackable.cs" />
-    <Compile Include="Behaviors\ISwimming.cs" />
-    <Compile Include="Ducks\Decoy.cs" />
+    <Compile Include="Behaviors\Fly\FlyNoWay.cs" />
+    <Compile Include="Behaviors\Fly\FlyWithWings.cs" />
+    <Compile Include="Behaviors\Fly\IFlying.cs" />
+    <Compile Include="Behaviors\Quack\IQuackable.cs" />
+    <Compile Include="Behaviors\Quack\QuackDefault.cs" />
+    <Compile Include="Behaviors\Quack\QuackMuted.cs" />
+    <Compile Include="Behaviors\Quack\QuackSqueak.cs" />
+    <Compile Include="Behaviors\Swim\ISwimming.cs" />
+    <Compile Include="Behaviors\Swim\SwimDefault.cs" />
+    <Compile Include="Behaviors\Swim\SwimStone.cs" />
+    <Compile Include="Behaviors\Swim\SwimWithTheFlow.cs" />
+    <Compile Include="Ducks\MallardDuck.cs" />
+    <Compile Include="Ducks\RedheadDuck.cs" />
+    <Compile Include="Ducks\RoastDuck.cs" />
+    <Compile Include="Ducks\RubberDuck.cs" />
+    <Compile Include="Ducks\WoodDuck.cs" />
+    <Compile Include="DuckTales\Decoy.cs" />
     <Compile Include="Ducks\Duck.cs" />
-    <Compile Include="Ducks\DuckTales.cs" />
+    <Compile Include="DuckTales\DuckTales.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

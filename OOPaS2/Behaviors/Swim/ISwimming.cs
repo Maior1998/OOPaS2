@@ -1,4 +1,4 @@
-﻿namespace OOPaS2.Behaviors
+﻿namespace OOPaS2.Behaviors.Swim
 {
     /// <summary>
     /// Интерфейс плавания. Оределяет метод для плавания уток.
@@ -9,7 +9,7 @@
         /// <summary>
         /// Осуществляет плавание утки.
         /// </summary>
-        void Swimm();
+        void Swim();
 
     }
 }

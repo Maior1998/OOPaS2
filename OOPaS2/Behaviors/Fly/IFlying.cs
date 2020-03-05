@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OOPaS2.Behaviors
+﻿namespace OOPaS2.Behaviors.Fly
 {
 
     /// <summary>

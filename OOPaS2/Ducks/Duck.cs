@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using OOPaS2.Behaviors;
+﻿using OOPaS2.Behaviors.Fly;
+using OOPaS2.Behaviors.Quack;
+using OOPaS2.Behaviors.Swim;
 
 namespace OOPaS2.Ducks
 {
     /// <summary>
     /// Представляет собой класс утки, содержащий поля и методы, которыми оперируют все утки.
     /// </summary>
-    public abstract class Duck : DuckTales
+    public abstract class Duck : DuckTales.DuckTales
     {
         private protected IQuackable QuackBehavior;
         private protected ISwimming SwimBehavior;
@@ -19,10 +16,7 @@ namespace OOPaS2.Ducks
         /// <summary>
         /// Отображает текущую утку на экране.
         /// </summary>
-        public void Display()
-        {
-
-        }
+        public abstract void Display();
 
         /// <summary>
         /// Осуществляет кряканье текущей утки в соответствии с её поведением <see cref="QuackBehavior"/>.
@@ -45,7 +39,7 @@ namespace OOPaS2.Ducks
         /// </summary>
         public void DoSwimm()
         {
-            SwimBehavior.Swimm();
+            SwimBehavior.Swim();
         }
 
     }
