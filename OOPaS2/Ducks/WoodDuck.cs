@@ -24,9 +24,7 @@ namespace OOPaS2.Ducks
             QuackBehavior = new QuackMuted();
         }
 
-        public override void Display()
-        {
-            Console.WriteLine("Wood Duck appears on the screen!");
-        }
+        public override string Name { get; protected set; } = "Wood Duck";
+        
     }
 }

@@ -1,4 +1,5 @@
-﻿using OOPaS2.Behaviors.Fly;
+﻿using System;
+using OOPaS2.Behaviors.Fly;
 using OOPaS2.Behaviors.Quack;
 using OOPaS2.Behaviors.Swim;
 
@@ -14,10 +15,18 @@ namespace OOPaS2.Ducks
         private protected IFlying FlyBehavior;
 
         /// <summary>
+        /// Название этого типа уток
+        /// </summary>
+        public abstract string Name { get; protected set; }
+
+
+        /// <summary>
         /// Отображает текущую утку на экране.
         /// </summary>
-        public abstract void Display();
-
+        public void Display()
+        {
+            Console.WriteLine($"{Name} appears on the screen!");
+        }
         /// <summary>
         /// Осуществляет кряканье текущей утки в соответствии с её поведением <see cref="QuackBehavior"/>.
         /// </summary>
@@ -37,10 +46,15 @@ namespace OOPaS2.Ducks
         /// <summary>
         /// Осуществляет полет текущей утки в соответствии с её поведением <see cref="SwimBehavior"/>.
         /// </summary>
-        public void DoSwimm()
+        public void DoSwim()
         {
             SwimBehavior.Swim();
         }
 
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

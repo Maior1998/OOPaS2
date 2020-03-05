@@ -13,7 +13,7 @@ namespace OOPaS2.Behaviors.Fly
     {
         public void Fly()
         {
-            Console.WriteLine("This duck can't fly!");
+            Console.WriteLine("This Duck can't fly!");
         }
     }
 }

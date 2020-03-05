@@ -24,9 +24,7 @@ namespace OOPaS2.Ducks
             SwimBehavior = new SwimDefault();
         }
 
-        public override void Display()
-        {
-            Console.WriteLine("Readhead Duck appears on the screen!");
-        }
+        public override string Name { get; protected set; } = "Redhead Duck";
+
     }
 }

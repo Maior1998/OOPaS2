@@ -24,9 +24,7 @@ namespace OOPaS2.Ducks
             SwimBehavior = new SwimAdrift();
         }
 
-        public override void Display()
-        {
-            Console.WriteLine("Rubber Duck appears on the screen!");
-        }
+        public override string Name { get; protected set; } = "RubberDuck";
+
     }
 }

@@ -20,9 +20,7 @@ namespace OOPaS2.Ducks
             SwimBehavior= new SwimDefault();
         }
 
-        public override void Display()
-        {
-            Console.WriteLine("Mallard Duck appears on the screen!");
-        }
+        public override string Name { get; protected set; } = "Mallard Duck";
+        
     }
 }
