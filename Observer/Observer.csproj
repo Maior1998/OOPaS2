@@ -43,10 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="abstracts\IDisplayable.cs" />
     <Compile Include="abstracts\Observer.cs" />
-    <Compile Include="abstracts\StatsCenter.cs" />
+    <Compile Include="abstracts\Observable.cs" />
+    <Compile Include="Displays\CurrentConditionsDisplay.cs" />
+    <Compile Include="Displays\TemperatureStatisticsDisplay.cs" />
+    <Compile Include="Displays\ThirdPartyDisplay.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WeatherStation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

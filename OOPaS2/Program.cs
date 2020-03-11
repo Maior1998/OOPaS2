@@ -6,7 +6,7 @@ namespace OOPaS2
 {
     class Program
     {
-        private static DuckTales.DuckTales[] Ducks=
+        private static readonly DuckTales.DuckTales[] ducks=
         {
             new MallardDuck(), 
             new RedheadDuck(), 
@@ -17,19 +17,19 @@ namespace OOPaS2
 
         static void Main(string[] args)
         {
-            foreach (DuckTales.DuckTales DuckTale in Ducks)
+            foreach (DuckTales.DuckTales duckTale in ducks)
             {
                 Console.WriteLine();
-                switch (DuckTale)
+                switch (duckTale)
                 {
-                    case Duck CurrentDuck:
-                        CurrentDuck.Display();
-                        CurrentDuck.DoQuack();
-                        CurrentDuck.DoFly();
-                        CurrentDuck.DoSwim();
+                    case Duck currentDuck:
+                        currentDuck.Display();
+                        currentDuck.DoQuack();
+                        currentDuck.DoFly();
+                        currentDuck.DoSwim();
                         break;
-                    case Decoy CurrentDecoy:
-                        CurrentDecoy.Quack();
+                    case Decoy currentDecoy:
+                        currentDecoy.DoQuack();
                         break;
                     default:
                         Console.WriteLine("Wow, i don't know this type of duck and this is not a decoy! What is this?");

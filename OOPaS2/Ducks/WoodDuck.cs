@@ -22,9 +22,8 @@ namespace OOPaS2.Ducks
             FlyBehavior = new FlyNoWay();
             SwimBehavior = new SwimAdrift();
             QuackBehavior = new QuackMuted();
+            Name = "Wood Duck";
         }
-
-        public override string Name { get; protected set; } = "Wood Duck";
         
     }
 }

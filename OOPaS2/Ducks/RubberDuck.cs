@@ -22,9 +22,9 @@ namespace OOPaS2.Ducks
             QuackBehavior = new QuackSqueak();
             FlyBehavior = new FlyNoWay();
             SwimBehavior = new SwimAdrift();
+            Name = "Rubber Duck";
         }
 
-        public override string Name { get; protected set; } = "RubberDuck";
 
     }
 }

@@ -18,9 +18,7 @@ namespace OOPaS2.Ducks
             QuackBehavior = new QuackDefault();
             FlyBehavior = new FlyWithWings();
             SwimBehavior= new SwimDefault();
+            Name = "Mallard Duck";
         }
-
-        public override string Name { get; protected set; } = "Mallard Duck";
-        
     }
 }

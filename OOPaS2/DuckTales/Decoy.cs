@@ -10,9 +10,22 @@ namespace OOPaS2.DuckTales
     public class Decoy: DuckTales
     {
         /// <summary>
+        /// Определяет поведение манка при крякании.
+        /// </summary>
+        private IQuackable quackBehavior;
+
+        /// <summary>
+        /// Инициализирует новый объект утиного манка.
+        /// </summary>
+        public Decoy()
+        {
+            quackBehavior = new QuackDefault();
+        }
+
+        /// <summary>
         /// Крякнуть утиным манком.
         /// </summary>
-        public void Quack()
+        public void DoQuack()
         {
             Console.WriteLine("Decoy did \"Quack\".");
         }

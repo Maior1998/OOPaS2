@@ -11,9 +11,9 @@ namespace Decorator
     {
         protected Beverage InnerBeverage;
 
-        protected CondimentDecorator(Beverage Source)
+        protected CondimentDecorator(Beverage source)
         {
-            InnerBeverage = Source;
+            InnerBeverage = source;
         }
 
         public override double GetCost()
@@ -23,25 +23,25 @@ namespace Decorator
 
         public override string GetDescription()
         {
-            Dictionary<string, int> OrderList = new Dictionary<string, int>();
-            CondimentDecorator BufferDecorator = this;
-            string BufferName;
-            while (BufferDecorator.InnerBeverage is CondimentDecorator Inner)
+            Dictionary<string, int> orderList = new Dictionary<string, int>();
+            CondimentDecorator bufferDecorator = this;
+            string bufferName;
+            while (bufferDecorator.InnerBeverage is CondimentDecorator inner)
             {
-                BufferName = BufferDecorator.Description;
-                if (!OrderList.ContainsKey(BufferName))
-                    OrderList.Add(BufferName, 0);
-                OrderList[BufferName]++;
-                BufferDecorator = Inner;
+                bufferName = bufferDecorator.Description;
+                if (!orderList.ContainsKey(bufferName))
+                    orderList.Add(bufferName, 0);
+                orderList[bufferName]++;
+                bufferDecorator = inner;
             }
-            BufferName = BufferDecorator.Description;
-            if (!OrderList.ContainsKey(BufferName))
-                OrderList.Add(BufferName, 0);
-            OrderList[BufferName]++;
-            return $"{BufferDecorator.InnerBeverage.GetDescription()}, {string.Join(", ", OrderList.Select(row => $"{(CountToStr.ContainsKey(row.Value) ? CountToStr[row.Value] : row.Value.ToString())} {row.Key}"))}";
+            bufferName = bufferDecorator.Description;
+            if (!orderList.ContainsKey(bufferName))
+                orderList.Add(bufferName, 0);
+            orderList[bufferName]++;
+            return $"{bufferDecorator.InnerBeverage.GetDescription()}, {string.Join(", ", orderList.Select(row => $"{(countToStr.ContainsKey(row.Value) ? countToStr[row.Value] : row.Value.ToString())} {row.Key}"))}";
         }
 
-        private static readonly Dictionary<int, string> CountToStr = new Dictionary<int, string>
+        private static readonly Dictionary<int, string> countToStr = new Dictionary<int, string>
         {
             {1,"" },
             {2,"Double" },

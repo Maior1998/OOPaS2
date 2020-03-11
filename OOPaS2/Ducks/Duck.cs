@@ -10,16 +10,24 @@ namespace OOPaS2.Ducks
     /// </summary>
     public abstract class Duck : DuckTales.DuckTales
     {
+        /// <summary>
+        /// Определяет поведение утки при крякании.
+        /// </summary>
         private protected IQuackable QuackBehavior;
+        /// <summary>
+        /// Определяет поведение утки при плавании.
+        /// </summary>
         private protected ISwimming SwimBehavior;
+        /// <summary>
+        /// Определяет поведение утки при полете.
+        /// </summary>
         private protected IFlying FlyBehavior;
 
         /// <summary>
-        /// Название этого типа уток
+        /// Название этого типа уток.
         /// </summary>
-        public abstract string Name { get; protected set; }
-
-
+        public string Name { get; protected set; }
+        
         /// <summary>
         /// Отображает текущую утку на экране.
         /// </summary>

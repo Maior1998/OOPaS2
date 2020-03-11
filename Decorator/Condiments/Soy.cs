@@ -8,7 +8,7 @@ namespace Decorator.Condiments
 {
     public class Soy: CondimentDecorator
     {
-        public Soy(Beverage Source) : base(Source)
+        public Soy(Beverage source) : base(source)
         {
             Cost = 0.3;
             Description = "Soy";

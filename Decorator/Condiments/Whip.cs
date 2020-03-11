@@ -2,7 +2,7 @@
 {
     public class Whip: CondimentDecorator
     {
-        public Whip(Beverage Source) : base(Source)
+        public Whip(Beverage source) : base(source)
         {
             Cost = 0.2;
             Description = "Whip";

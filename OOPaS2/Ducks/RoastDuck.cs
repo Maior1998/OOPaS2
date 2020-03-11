@@ -22,9 +22,7 @@ namespace OOPaS2.Ducks
             FlyBehavior = new FlyNoWay();
             SwimBehavior = new SwimLikeStone();
             QuackBehavior = new QuackMuted();
+            Name = "Roast Duck";
         }
-
-        public override string Name { get; protected set; } = "Roast Duck";
-
     }
 }
