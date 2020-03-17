@@ -7,8 +7,8 @@ namespace Decorator.Condiments
     {
         public Whip(Beverage source, double multiplier = 1) : base(0.2, multiplier, "Whip", source)
         {
-            
         }
-        protected override Type[] suitableBeverages => new[] { typeof(Beverages.Coffee) };
+
+        protected override Type[] suitableBeverages => new[] {typeof(Beverages.Coffee)};
     }
 }

@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Observer.abstracts
+﻿namespace Observer.abstracts
 {
-    interface IDisplayable
+    internal interface IDisplayable
     {
         void Display();
     }

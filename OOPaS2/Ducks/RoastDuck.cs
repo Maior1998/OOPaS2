@@ -1,21 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using OOPaS2.Behaviors.Fly;
+﻿using OOPaS2.Behaviors.Fly;
 using OOPaS2.Behaviors.Quack;
 using OOPaS2.Behaviors.Swim;
 
 namespace OOPaS2.Ducks
 {
     /// <summary>
-    /// Определяет жареную утку.
+    ///     Определяет жареную утку.
     /// </summary>
     public class RoastDuck : Duck
     {
         /// <summary>
-        /// Инициализирует новый объект жареной утки.
+        ///     Инициализирует новый объект жареной утки.
         /// </summary>
         public RoastDuck()
         {

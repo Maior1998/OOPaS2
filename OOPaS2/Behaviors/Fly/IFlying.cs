@@ -1,13 +1,12 @@
 ﻿namespace OOPaS2.Behaviors.Fly
 {
-
     /// <summary>
-    /// Интерфейс полета утки. Определяет метод полета.
+    ///     Интерфейс полета утки. Определяет метод полета.
     /// </summary>
-    interface IFlying
+    internal interface IFlying
     {
         /// <summary>
-        /// Осуществляет полет утки.
+        ///     Осуществляет полет утки.
         /// </summary>
         void Fly();
     }

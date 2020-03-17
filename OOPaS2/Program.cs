@@ -4,18 +4,18 @@ using OOPaS2.DuckTales;
 
 namespace OOPaS2
 {
-    class Program
+    internal class Program
     {
-        private static readonly DuckTales.DuckTales[] ducks=
+        private static readonly DuckTales.DuckTales[] ducks =
         {
-            new MallardDuck(), 
-            new RedheadDuck(), 
-            new RubberDuck(), 
-            new RoastDuck(), 
-            new Decoy(), 
+            new MallardDuck(),
+            new RedheadDuck(),
+            new RubberDuck(),
+            new RoastDuck(),
+            new Decoy()
         };
 
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             foreach (DuckTales.DuckTales duckTale in ducks)
             {
@@ -38,7 +38,6 @@ namespace OOPaS2
             }
 
             Console.WriteLine();
-
         }
     }
 }

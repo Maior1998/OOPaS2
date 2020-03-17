@@ -4,11 +4,11 @@ namespace Observer.abstracts
 {
     public abstract class Subject
     {
-        private readonly List<Object> observers =new List<Object>();
+        private readonly List<Object> observers = new List<Object>();
 
         public void Register(Object target)
         {
-            if(!observers.Contains(target))
+            if (!observers.Contains(target))
                 observers.Add(target);
         }
 

@@ -1,21 +1,19 @@
-﻿using System;
-using OOPaS2.Behaviors;
-using OOPaS2.Behaviors.Quack;
+﻿using OOPaS2.Behaviors.Quack;
 
 namespace OOPaS2.DuckTales
 {
     /// <summary>
-    /// Утиный манок.
+    ///     Утиный манок.
     /// </summary>
-    public class Decoy: DuckTales
+    public class Decoy : DuckTales
     {
         /// <summary>
-        /// Определяет поведение манка при крякании.
+        ///     Определяет поведение манка при крякании.
         /// </summary>
-        private IQuackable quackBehavior;
+        private readonly IQuackable quackBehavior;
 
         /// <summary>
-        /// Инициализирует новый объект утиного манка.
+        ///     Инициализирует новый объект утиного манка.
         /// </summary>
         public Decoy()
         {
@@ -23,7 +21,7 @@ namespace OOPaS2.DuckTales
         }
 
         /// <summary>
-        /// Крякнуть утиным манком.
+        ///     Крякнуть утиным манком.
         /// </summary>
         public void DoQuack()
         {

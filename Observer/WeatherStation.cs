@@ -1,15 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Observer.abstracts;
+﻿using Observer.abstracts;
 
 namespace Observer
 {
-    class WeatherStation : Subject
+    internal class WeatherStation : Subject
     {
+        private double humidity;
+
+        private double oxygenpercentage;
+
+        private double pressure;
+
+        private double rainfall;
         private double temperature;
+
+        private double visibility;
+
         public double Temperature
         {
             get => temperature;
@@ -19,8 +24,7 @@ namespace Observer
                 NotifyObservers(nameof(Temperature));
             }
         }
-        
-        private double humidity;
+
         public double Humidity
         {
             get => humidity;
@@ -31,7 +35,6 @@ namespace Observer
             }
         }
 
-        private double pressure;
         public double Pressure
         {
             get => pressure;
@@ -42,7 +45,6 @@ namespace Observer
             }
         }
 
-        private double oxygenpercentage;
         public double OxygenPercentage
         {
             get => oxygenpercentage;
@@ -53,7 +55,6 @@ namespace Observer
             }
         }
 
-        private double visibility;
         public double Visibility
         {
             get => visibility;
@@ -64,7 +65,6 @@ namespace Observer
             }
         }
 
-        private double rainfall;
         public double Rainfall
         {
             get => rainfall;

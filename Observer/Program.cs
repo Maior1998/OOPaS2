@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Observer.Displays;
+﻿using Observer.Displays;
 
 namespace Observer
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            WeatherStation station = new WeatherStation()
+            WeatherStation station = new WeatherStation
             {
                 Temperature = 30.0,
                 Humidity = 50,

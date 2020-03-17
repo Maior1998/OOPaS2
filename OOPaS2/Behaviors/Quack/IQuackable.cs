@@ -1,12 +1,12 @@
 ﻿namespace OOPaS2.Behaviors.Quack
 {
     /// <summary>
-    /// Интерфейс кряканья утки. Осуществляет "кря".
+    ///     Интерфейс кряканья утки. Осуществляет "кря".
     /// </summary>
-    interface IQuackable
+    internal interface IQuackable
     {
         /// <summary>
-        /// Крякнуть (сделать "кря").
+        ///     Крякнуть (сделать "кря").
         /// </summary>
         void Quack();
     }

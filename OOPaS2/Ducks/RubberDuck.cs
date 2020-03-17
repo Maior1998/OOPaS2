@@ -1,21 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using OOPaS2.Behaviors.Fly;
+﻿using OOPaS2.Behaviors.Fly;
 using OOPaS2.Behaviors.Quack;
 using OOPaS2.Behaviors.Swim;
 
 namespace OOPaS2.Ducks
 {
     /// <summary>
-    /// Определяет резиновую утку.
+    ///     Определяет резиновую утку.
     /// </summary>
     public class RubberDuck : Duck
     {
         /// <summary>
-        /// Инициализирует новый объект резиновой утки.
+        ///     Инициализирует новый объект резиновой утки.
         /// </summary>
         public RubberDuck()
         {
@@ -24,7 +19,5 @@ namespace OOPaS2.Ducks
             SwimBehavior = new SwimAdrift();
             Name = "Rubber Duck";
         }
-
-
     }
 }
