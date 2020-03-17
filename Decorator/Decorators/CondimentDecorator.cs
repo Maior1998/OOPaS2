@@ -54,12 +54,15 @@ namespace Decorator
 
         protected CondimentDecorator(double basePrice, double multiplier, string description, Beverage source) : base(basePrice, multiplier, description)
         {
-            foreach (Type type in suitableBeverages)
-                if (type.IsInstanceOfType(source))
-                {
-                    InnerBeverage = source;
-                    break;
-                }
+            if (source is CondimentDecorator)
+                InnerBeverage = source;
+            else
+                foreach (Type type in suitableBeverages)
+                    if (type.IsInstanceOfType(source))
+                    {
+                        InnerBeverage = source;
+                        break;
+                    }
             if (InnerBeverage is null)
                 throw new InvalidOperationException("Wrong condiment!");
         }
