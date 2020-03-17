@@ -10,7 +10,7 @@
 
         public double Cost;
 
-        protected Beverage(double basePrice, double multiplier, string description)
+        protected Beverage(double basePrice, string description, double multiplier)
         {
             Cost = basePrice * multiplier;
             Description = description;
@@ -30,7 +30,7 @@
 
         public override string ToString()
         {
-            return $"{GetDescription()} ({GetCost()})";
+            return $"{GetDescription()} (${GetCost()})";
         }
     }
 }

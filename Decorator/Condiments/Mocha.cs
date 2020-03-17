@@ -9,11 +9,11 @@ namespace Decorator.Condiments
 {
     public class Mocha : CondimentDecorator
     {
-        protected 
-        public Mocha(Beverage source) : base(source)
+        public Mocha(Beverage source, double multiplier=1) : base(0.2, multiplier, "Milk", source)
         {
-            Cost = 0.2;
-            Description = "Mocha";
+            
         }
+
+        protected override Type[] suitableBeverages => new[] { typeof(Beverages.Coffee) };
     }
 }

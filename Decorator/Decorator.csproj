@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Beverages\Beverage.cs" />
     <Compile Include="Coffee\Coffee.cs" />
+    <Compile Include="Condiments\Caramel.cs" />
     <Compile Include="Tea\ColdTea.cs" />
     <Compile Include="Tea\Tea.cs" />
     <Compile Include="Coffee\DarkRoast.cs" />

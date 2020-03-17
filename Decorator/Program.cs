@@ -13,7 +13,7 @@ namespace Decorator
     {
         static void Main(string[] args)
         {
-            Beverage test = new DarkRoast(0.5,1);
+            Beverage test = new DarkRoast();
             test = new Milk(test);
             test = new Milk(test);
             test = new Mocha(test);
@@ -21,6 +21,7 @@ namespace Decorator
             test = new Soy(test);
             test = new Milk(test);
             test = new Milk(test);
+            test = new Caramel(test);
             Console.WriteLine();
         }
     }

@@ -9,10 +9,10 @@ namespace Decorator.Condiments
 {
     public class Soy: CondimentDecorator
     {
-        public Soy(Beverage source) : base(source)
+        public Soy(Beverage source, double multiplier = 1) : base(0.3, multiplier, "Soy", source)
         {
-            Cost = 0.3;
-            Description = "Soy";
+            
         }
+        protected override Type[] suitableBeverages => new[] { typeof(Beverages.Coffee) };
     }
 }

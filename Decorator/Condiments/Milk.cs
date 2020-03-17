@@ -11,14 +11,10 @@ namespace Decorator.Condiments
     public class Milk : CondimentDecorator
     {
         
-        public Milk(double multiplier,Beverage source) : base(0.1,multiplier,source)
+        public Milk(Beverage source, double multiplier = 1) : base(0.1,multiplier,"Milk",source)
         {
-            suitableBeverages = new[]
-            {
-                typeof(DarkRoast),
-            };
-            Cost = 0.1;
-            Description = "Milk";
         }
+
+        protected override Type[] suitableBeverages => new[] { typeof(Beverages.Coffee) };
     }
 }

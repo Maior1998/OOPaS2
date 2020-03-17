@@ -10,7 +10,7 @@ namespace Decorator
 
     public abstract class CondimentDecorator : Beverage
     {
-        protected Type[] suitableBeverages;
+        protected abstract Type[] suitableBeverages { get; }
 
         protected Beverage InnerBeverage;
 
@@ -52,17 +52,17 @@ namespace Decorator
         };
 
 
-        protected CondimentDecorator(double basePrice, double multiplier, string description, Beverage source) : base(basePrice, multiplier, description)
+        protected CondimentDecorator(double basePrice, double multiplier, string description, Beverage source) : base(basePrice, description, multiplier)
         {
-            if (source is CondimentDecorator)
-                InnerBeverage = source;
-            else
-                foreach (Type type in suitableBeverages)
-                    if (type.IsInstanceOfType(source))
-                    {
-                        InnerBeverage = source;
-                        break;
-                    }
+            Beverage inner = source;
+            while (inner is CondimentDecorator condiment)
+                inner=condiment.InnerBeverage;
+            foreach (Type type in suitableBeverages)
+                if (type.IsInstanceOfType(inner))
+                {
+                    InnerBeverage = source;
+                    break;
+                }
             if (InnerBeverage is null)
                 throw new InvalidOperationException("Wrong condiment!");
         }

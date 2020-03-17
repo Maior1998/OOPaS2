@@ -8,9 +8,8 @@ namespace Decorator.Coffee
 {
     class DarkRoast : Beverages.Coffee
     {
-        public DarkRoast(double basePrice, double multiplier) : base(basePrice, multiplier)
+        public DarkRoast(double multiplier=1) : base(0.3, multiplier, "Dark Roast")
         {
-            Description = "Dark Roast";
         }
 
     }

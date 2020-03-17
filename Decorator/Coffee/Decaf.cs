@@ -9,9 +9,8 @@ namespace Decorator.Coffee
 {
     class Decaf : Beverages.Coffee
     {
-        public Decaf(double basePrice, double multiplier) : base(basePrice, multiplier)
+        public Decaf(double multiplier=1) : base(0.2, multiplier, "Decaf")
         {
-            Description = "Decaf";
         }
 
     }
