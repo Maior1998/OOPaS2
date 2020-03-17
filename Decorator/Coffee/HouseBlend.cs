@@ -7,11 +7,10 @@ using Decorator.Beverages;
 
 namespace Decorator.Coffee
 {
-    public class HouseBlend :Beverage
+    public class HouseBlend : Beverages.Coffee
     {
-        public HouseBlend(double basePrice, double multiplier)
+        public HouseBlend(double basePrice, double multiplier) : base(basePrice, multiplier)
         {
-            Cost = basePrice * multiplier;
             Description = "House Blend";
         }
 

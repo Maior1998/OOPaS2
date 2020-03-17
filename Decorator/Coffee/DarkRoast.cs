@@ -4,14 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Decorator.Beverages;
-
 namespace Decorator.Coffee
 {
-    class DarkRoast : Beverage
+    class DarkRoast : Beverages.Coffee
     {
-        public DarkRoast(double basePrice, double multiplier)
+        public DarkRoast(double basePrice, double multiplier) : base(basePrice, multiplier)
         {
-            Cost = basePrice * multiplier;
             Description = "Dark Roast";
         }
 

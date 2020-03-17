@@ -44,6 +44,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Beverages\Beverage.cs" />
+    <Compile Include="Coffee\Coffee.cs" />
+    <Compile Include="Tea\ColdTea.cs" />
+    <Compile Include="Tea\Tea.cs" />
     <Compile Include="Coffee\DarkRoast.cs" />
     <Compile Include="Coffee\Decaf.cs" />
     <Compile Include="Coffee\Espresso.cs" />
@@ -53,9 +56,6 @@
     <Compile Include="Condiments\Mocha.cs" />
     <Compile Include="Condiments\Soy.cs" />
     <Compile Include="Condiments\Whip.cs" />
-    <Compile Include="Decorators\ICoffeeDecorator.cs" />
-    <Compile Include="Decorators\ITeaDecorator.cs" />
-    <Compile Include="Decorators\TeaDecorator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

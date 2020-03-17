@@ -10,11 +10,17 @@
 
         public double Cost;
 
+        protected Beverage(double basePrice, double multiplier, string description)
+        {
+            Cost = basePrice * multiplier;
+            Description = description;
+        }
+
         /// <summary>
         /// Возвращает описание текущего компонента или их набора.
         /// </summary>
         /// <returns>Строка - описание текущего компонента или их набора.</returns>
-        public virtual string GetDescription()=>Description;
+        public virtual string GetDescription() => Description;
 
         /// <summary>
         /// Возвращает текущую стоимость данного компонента или их набора.

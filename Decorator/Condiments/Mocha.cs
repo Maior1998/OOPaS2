@@ -9,6 +9,7 @@ namespace Decorator.Condiments
 {
     public class Mocha : CondimentDecorator
     {
+        protected 
         public Mocha(Beverage source) : base(source)
         {
             Cost = 0.2;

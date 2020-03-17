@@ -7,11 +7,10 @@ using Decorator.Beverages;
 
 namespace Decorator.Coffee
 {
-    class Espresso : Beverage
+    class Espresso : Beverages.Coffee
     {
-        public Espresso(double basePrice, double multiplier)
+        public Espresso(double basePrice, double multiplier) : base(basePrice, multiplier)
         {
-            Cost = basePrice * multiplier;
             Description = "Espresso";
         }
 

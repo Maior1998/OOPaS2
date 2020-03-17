@@ -10,8 +10,10 @@ namespace Decorator
 
     public abstract class CondimentDecorator : Beverage
     {
+        protected Type[] suitableBeverages;
+
         protected Beverage InnerBeverage;
-        
+
         public override double GetCost()
         {
             return Cost + InnerBeverage.GetCost();
@@ -48,5 +50,18 @@ namespace Decorator
             {7,"Septuple" },
             {8,"Octuple" },
         };
+
+
+        protected CondimentDecorator(double basePrice, double multiplier, string description, Beverage source) : base(basePrice, multiplier, description)
+        {
+            foreach (Type type in suitableBeverages)
+                if (type.IsInstanceOfType(source))
+                {
+                    InnerBeverage = source;
+                    break;
+                }
+            if (InnerBeverage is null)
+                throw new InvalidOperationException("Wrong condiment!");
+        }
     }
 }
