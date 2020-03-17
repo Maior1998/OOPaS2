@@ -7,13 +7,13 @@ using Observer.abstracts;
 
 namespace Observer.Displays
 {
-    public class CurrentConditionsDisplay: abstracts.Observer, IDisplayable
+    public class CurrentConditionsDisplay: abstracts.Object, IDisplayable
     {
-        public CurrentConditionsDisplay(Observable source) : base(source)
+        public CurrentConditionsDisplay(Subject source) : base(source)
         {
         }
 
-        public override void Update(string changedproperty)
+        public override void Update(string changedProperty)
         {
             Display();
         }

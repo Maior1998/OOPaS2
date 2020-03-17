@@ -27,7 +27,7 @@ namespace OOPaS2.DuckTales
         /// </summary>
         public void DoQuack()
         {
-            Console.WriteLine("Decoy did \"Quack\".");
+            quackBehavior.Quack();
         }
     }
 }

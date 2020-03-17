@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Decorator.Beverages;
 
 namespace Decorator
 {
@@ -10,12 +11,7 @@ namespace Decorator
     public abstract class CondimentDecorator : Beverage
     {
         protected Beverage InnerBeverage;
-
-        protected CondimentDecorator(Beverage source)
-        {
-            InnerBeverage = source;
-        }
-
+        
         public override double GetCost()
         {
             return Cost + InnerBeverage.GetCost();

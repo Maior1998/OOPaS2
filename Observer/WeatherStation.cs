@@ -7,7 +7,7 @@ using Observer.abstracts;
 
 namespace Observer
 {
-    class WeatherStation : Observable
+    class WeatherStation : Subject
     {
         private double temperature;
         public double Temperature

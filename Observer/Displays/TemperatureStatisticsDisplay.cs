@@ -8,7 +8,7 @@ using Observer.abstracts;
 
 namespace Observer.Displays
 {
-    class TempStatDisplay : abstracts.Observer, IDisplayable
+    class TempStatDisplay : abstracts.Object, IDisplayable
     {
         private readonly Queue<double> tempstats = new Queue<double>();
 
@@ -17,10 +17,10 @@ namespace Observer.Displays
 
         }
 
-        public override void Update(string changedproperty)
+        public override void Update(string changedProperty)
         {
             WeatherStation weatherstationsource = (WeatherStation)datasource;
-            if (changedproperty != nameof(WeatherStation.Temperature)) return;
+            if (changedProperty != nameof(WeatherStation.Temperature)) return;
             tempstats.Enqueue(weatherstationsource.Temperature);
             while (tempstats.Count > 10)
                 tempstats.Dequeue();

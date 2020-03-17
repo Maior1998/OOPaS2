@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Observer.abstracts
 {
-    public abstract class Observer : IDisposable
+    public abstract class Object : IDisposable
 
     {
-        protected Observable datasource;
+        protected Subject datasource;
 
-        protected Observer(Observable source)
+        protected Object(Subject source)
         {
             datasource = source;
             datasource.Register(this);

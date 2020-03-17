@@ -1,4 +1,6 @@
-﻿namespace Decorator.Condiments
+﻿using Decorator.Beverages;
+
+namespace Decorator.Condiments
 {
     public class Whip: CondimentDecorator
     {
