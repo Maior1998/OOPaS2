@@ -2,6 +2,7 @@
 using Decorator.Beverages;
 using Decorator.Coffee;
 using Decorator.Condiments;
+using Decorator.Tea;
 
 namespace Decorator
 {
@@ -17,7 +18,8 @@ namespace Decorator
             test = new Soy(test);
             test = new Milk(test);
             test = new Milk(test);
-            test = new Caramel(test);
+            Beverage tea = new ColdTea();
+            test = new Caramel(tea);
             Console.WriteLine();
         }
     }
